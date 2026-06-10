@@ -1,0 +1,93 @@
+POST http://localhost:8080/api/drivers
+Content-Type: application/json
+
+{
+    "name":"Rahul"
+}
+
+###
+POST http://localhost:8080/api/drivers
+Content-Type: application/json
+
+{
+    "name":"Amit"
+}
+
+###
+
+POST http://localhost:8080/api/orders/place
+Content-Type: application/json
+
+{
+    "userId":1,
+    "restaurantName":"Dominos",
+    "deliveryAddress":"Mumbai"
+}
+
+###
+
+PUT http://localhost:8080/api/orders/1/status?status=DELIVERED
+
+###
+
+POST http://localhost:8080/api/orders/place
+Content-Type: application/json
+
+{
+    "userId":1,
+    "restaurantName":"Pizza Hut",
+    "deliveryAddress":"Mumbai"
+}
+
+###
+
+
+# new
+
+POST http://localhost:8080/api/drivers
+Content-Type: application/json
+
+{
+  "name":"Rahul"
+}
+
+###
+
+POST http://localhost:8080/api/orders/place
+Content-Type: application/json
+
+{
+    "userId":1,
+    "restaurantName":"McDonalds",
+    "deliveryAddress":"Mumbai"
+}
+
+###
+
+PUT http://localhost:8080/api/orders/1/status?status=CANCELLED
+
+###
+
+
+# new
+
+### SIGNUP
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "name":"Anuj",
+    "email":"anuj@gmail.com",
+    "password":"123456"
+}
+
+###
+
+### LOGIN
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"anuj@gmail.com",
+    "password":"123456"
+}
