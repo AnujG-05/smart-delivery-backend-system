@@ -26,7 +26,9 @@ public class SecurityConfig {
                         "/api/auth/**",
                         "/swagger-ui/**",
                         "/v3/api-docs/**",
-                        "/swagger-ui.html"
+                        "/swagger-ui.html",
+                        "/",                
+                        "/api/health" 
                 ).permitAll()
 
                 // Admin APIs
