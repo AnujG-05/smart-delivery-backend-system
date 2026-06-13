@@ -11,7 +11,6 @@ public class SecurityConfig {
 
     private final JwtFilter jwtFilter;
 
-    // ✅ Inject JwtFilter via constructor
     public SecurityConfig(JwtFilter jwtFilter) {
         this.jwtFilter = jwtFilter;
     }
@@ -20,6 +19,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf.disable())
+
+            .cors(cors -> {})
+            
             .authorizeHttpRequests(auth -> auth
                 // Public APIs
                 .requestMatchers(
